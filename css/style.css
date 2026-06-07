@@ -2358,15 +2358,26 @@ footer {
   gap: 0.5rem;
 }
 
-/* Dashboard body — mobile: stacked, desktop: hero left + controls right */
+/* Dashboard body — mobile: stacked, desktop: hero + controls with vacancies spanning below */
 .dash-body {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "main"
+    "vacancies"
+    "panel";
 }
+
+.dash-main      { grid-area: main; }
+.dash-panel     { grid-area: panel; }
+.dash-vacancies { grid-area: vacancies; }
 
 @media (min-width: 900px) {
   .dash-body {
     grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas:
+      "main      panel"
+      "vacancies vacancies";
     align-items: start;
   }
 }
