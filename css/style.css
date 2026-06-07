@@ -2792,15 +2792,23 @@ footer {
 
 /* Media gallery */
 .media-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 0.875rem;
+}
+
+@media (min-width: 600px) {
+  .media-gallery {
+    flex-direction: row;
+  }
 }
 
 .media-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .media-item__preview {
