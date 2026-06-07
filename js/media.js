@@ -43,6 +43,11 @@ const jobs = {
 
 let activeJob = 'site-manager';
 
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
+
 function updatePreview(jobKey) {
   const job = jobs[jobKey];
   if (!job) return;
@@ -65,7 +70,7 @@ function updatePreview(jobKey) {
 
   // Caption
   const captionEl = document.getElementById('post-caption');
-  if (captionEl) captionEl.value = job.caption;
+  if (captionEl) { captionEl.value = job.caption; autoResize(captionEl); }
 
   // Gallery thumbnails
   [0, 1, 2].forEach(i => {
@@ -85,6 +90,13 @@ function updatePreview(jobKey) {
     item.classList.toggle('active', isActive);
     item.setAttribute('aria-selected', String(isActive));
   });
+}
+
+// Auto-resize caption textarea on manual edits
+const captionTextarea = document.getElementById('post-caption');
+if (captionTextarea) {
+  captionTextarea.addEventListener('input', () => autoResize(captionTextarea));
+  autoResize(captionTextarea);
 }
 
 // Job list click & keyboard
@@ -118,7 +130,7 @@ if (tabContainer) {
     // Adjust aspect ratio for different platforms
     const preview = document.getElementById('social-preview');
     if (!preview) return;
-    const ratios = { linkedin: '1200/627', facebook: '1200/627', instagram: '1/1', twitter: '16/9' };
+    const ratios = { linkedin: '1200/627', facebook: '1200/627', instagram: '1/1', whatsapp: '1/1' };
     preview.style.aspectRatio = ratios[tab.dataset.platform] || '1200/627';
   });
 }

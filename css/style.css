@@ -2788,7 +2788,7 @@ footer {
 .dash-input::placeholder { color: rgba(255, 255, 255, 0.25); }
 .dash-input:focus { outline: none; border-color: var(--cl-secondary); box-shadow: 0 0 0 3px rgba(33, 150, 212, 0.15); }
 .dash-input::-webkit-calendar-picker-indicator { filter: invert(0.6); cursor: pointer; }
-.dash-textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
+.dash-textarea { resize: none; min-height: 80px; line-height: 1.6; overflow: hidden; field-sizing: content; }
 
 /* Media gallery */
 .media-gallery {
@@ -2993,7 +2993,7 @@ footer {
 .platform-icon--linkedin  { background: #0A66C2; color: #fff; }
 .platform-icon--facebook  { background: #1877F2; color: #fff; }
 .platform-icon--instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
-.platform-icon--twitter   { background: #000; color: #fff; }
+.platform-icon--whatsapp  { background: #25d366; color: #fff; }
 .platform-icon--indeed    { background: #2164f3; color: #fff; }
 .platform-icon--google    { background: #fff; color: #4285F4; }
 
