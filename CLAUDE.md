@@ -1,18 +1,37 @@
-# CLAUDE.md — [Client Name] Project
+# CLAUDE.md — Vital Synergy
 
-Run `/web-project` at the start of every session to load all standard rules and workflow.
+## Screenshotting / verification
+
+Use Puppeteer (not gstack /browse) to verify page output. Dev server must be running first.
+
+```bash
+# Start dev server (background, port 3001)
+node serve.mjs
+
+# Take screenshot — saves to ./temporary screenshots/
+node screenshot.mjs http://localhost:3001 index
+node screenshot.mjs http://localhost:3001/about.html about
+```
+
+Then Read the saved PNG to view output.
 
 ## Client
-- Name: [Client Name]
-- Sector: [e.g. restaurant, solicitors, trades]
+- Name: Vital Synergy
+- Sector: Recruitment / talent acquisition
 
 ## Brand
-- Primary colour: #XXXXXX
-- Secondary colour: #XXXXXX
-- Fonts: [heading font] / [body font]
-- Logo: [yes/no — lives in brand_assets/]
+- Primary colour: #1a2b4a (dark navy)
+- Accent colour: #EB5324 (orange)
+- Hero accent: #5B8DEF (lighter blue — used for `class="accent--hero"` in headings)
+- Fonts: Inter (Google Fonts)
+- Logo: no — text-based nav logo
 
 ## Site
-- Pages: [list pages]
-- Live URL: [if applicable]
-- Any deviations from standard setup: [or delete this line]
+- Pages: index.html, about.html
+- Live URL: n/a (local dev)
+- Reference designs: example.jpg (index), aboutExample.jpg (about) — in project root when present
+
+## Notes
+- BEM CSS methodology
+- Font Awesome 6.5 via CDN
+- gstack /browse is blocked by App Control on this machine — always use Puppeteer via screenshot.mjs
