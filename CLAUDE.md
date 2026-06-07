@@ -40,3 +40,4 @@ Then Read the saved PNG to view output. Always use port 5501.
 - BEM CSS methodology
 - Font Awesome 6.5 via CDN
 - gstack /browse is blocked by App Control on this machine — always use Puppeteer via screenshot.mjs
+- Mobile navigation: hamburger menu only. No bottom navigation bar on this project.
