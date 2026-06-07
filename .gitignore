@@ -1,0 +1,19 @@
+# Screenshots
+temporary screenshots/
+
+# Puppeteer helper scripts
+screenshot*.mjs
+serve.mjs
+
+# Reference/working files
+*.jpg
+*.md
+!CLAUDE.md
+!README.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
