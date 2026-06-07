@@ -1,10 +1,11 @@
 :root {
   --cl-primary: #124B8A;
   --cl-secondary: #2196D4;
-  --cl-deep: #1e2a4a;
+  --cl-indigo: #2F3382;
+  --cl-deep: #2F3382;
   --cl-accent: #EB5324;
-  --cl-text: #1a1a2e;
-  --cl-muted: #6b7280;
+  --cl-text: #000000;
+  --cl-muted: #444444;
   --cl-white: #ffffff;
   --cl-light-bg: #f5f7fa;
   --space-xs: 0.5rem;
@@ -12,7 +13,8 @@
   --space-md: 2rem;
   --space-lg: clamp(2rem, 6vw, 4rem);
   --space-xl: clamp(3rem, 8vw, 6rem);
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Nunito', sans-serif;
   --radius: 10px;
   --shadow: 0 4px 24px rgba(18, 75, 138, 0.10), 0 1px 4px rgba(18, 75, 138, 0.06);
   --shadow-card: 0 2px 8px rgba(18, 75, 138, 0.08), 0 8px 32px rgba(18, 75, 138, 0.06);
@@ -39,17 +41,29 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: var(--cl-text);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.05;
 }
 
-h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h2 {
+  font-family: var(--font-body);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
 
 p { color: var(--cl-text); line-height: 1.7; }
 
@@ -93,7 +107,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .accent { color: var(--cl-accent); }
 .accent--blue { color: var(--cl-primary); }
-.accent--hero { color: #5B8DEF; }
+.accent--hero { color: var(--cl-secondary); }
 
 .section-heading { text-align: center; }
 
@@ -167,8 +181,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 500;
   transition: color 0.18s ease;
 }
-.top-bar__link:hover { color: var(--cl-primary); }
+.top-bar__link:hover,
+.top-bar__link:active { color: var(--cl-accent); }
 .top-bar__link:focus-visible { outline: 2px solid var(--cl-primary); outline-offset: 3px; border-radius: 2px; }
+.top-bar__link--hidden { display: none; }
 
 /* Nav */
 
@@ -214,13 +230,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav--open .nav__links { display: flex; }
 
 .nav__links a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
   padding: 0.625rem 0.75rem;
   font-weight: 500;
   font-size: 0.9375rem;
   border-radius: 6px;
   color: var(--cl-text);
   transition: color 0.18s ease, background 0.18s ease;
+}
+
+.nav__icon {
+  width: 1rem;
+  text-align: center;
+  color: var(--cl-primary);
+  flex-shrink: 0;
 }
 
 .nav__links a:hover,
@@ -267,6 +292,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     align-items: center;
   }
   .nav__links a { padding: 0.5rem 0.75rem; }
+  .nav__icon { display: none; }
+}
+
+/* Hide Candidate Login pill from mobile hamburger; it remains on desktop */
+@media (max-width: 767px) {
+  .nav__links li:has(.nav__cta) { display: none; }
 }
 
 /* Nav pill CTA button */
