@@ -668,6 +668,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-bottom: 1px solid rgba(18, 75, 138, 0.08);
 }
 
+@media (min-width: 768px) {
+  .logo-grid { padding-top: 0; }
+}
+
 .logo-grid__inner {
   display: flex;
   flex-direction: column;
