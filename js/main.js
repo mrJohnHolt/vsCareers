@@ -40,3 +40,19 @@ sections.forEach(s => observer.observe(s));
 window.addEventListener('scroll', () => {
   nav.classList.toggle('nav--scrolled', window.scrollY > 10);
 }, { passive: true });
+
+const backToTop = document.getElementById('back-to-top');
+const progressRing = document.getElementById('scroll-progress');
+const circumference = 2 * Math.PI * 24;
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = Math.min(scrolled / total, 1);
+  progressRing.style.strokeDashoffset = circumference - progress * circumference;
+  backToTop.classList.toggle('is-visible', scrolled > 200);
+}, { passive: true });
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
