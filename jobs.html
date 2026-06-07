@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Current job opportunities at Vital Synergy. Browse live vacancies across M&E engineering, trades, project management and business support roles in Lancashire.">
+  <title>Current Opportunities | Vital Synergy M&amp;E Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="visitor">
+
+  <div class="top-bar">
+    <div class="top-bar__inner container">
+      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
+        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
+        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
+      </div>
+      <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
+        <i class="fa-solid fa-building" aria-hidden="true"></i>
+        Employer Login
+      </a>
+      <a href="/candidate-login" class="top-bar__link">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Candidate Login
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
+        <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="logo-img">
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
+        <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
+        <li><a href="/jobs.html" class="active"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
+        <li><a href="/support"><i class="fa-solid fa-headset nav__icon" aria-hidden="true"></i>Support</a></li>
+        <li><a href="/contact"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+      </ul>
+      <a href="tel:+441282773338" class="nav__phone">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        01282 773 338
+      </a>
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero--jobs">
+      <div class="page-hero__inner container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <span aria-current="page">Current Opportunities</span>
+        </nav>
+        <h1>Current <span class="accent--hero">Opportunities</span></h1>
+        <p>We're always looking for talented people to join our growing team. Browse our live vacancies and take the next step in your career.</p>
+      </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="jobs-section">
+      <div class="jobs-layout container">
+
+        <!-- Filter Sidebar -->
+        <aside class="jobs-sidebar">
+          <h2 class="jobs-sidebar__title">Filter Positions</h2>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Discipline</h3>
+            <ul class="filter-list" data-filter="discipline">
+              <li><button class="filter-btn active" data-value="all">All Disciplines</button></li>
+              <li><button class="filter-btn" data-value="engineering-trades">Engineering &amp; Trades</button></li>
+              <li><button class="filter-btn" data-value="project-operations">Project &amp; Operations</button></li>
+              <li><button class="filter-btn" data-value="business-support">Business Support</button></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Employment Type</h3>
+            <ul class="filter-list" data-filter="type">
+              <li><button class="filter-btn active" data-value="all">All Types</button></li>
+              <li><button class="filter-btn" data-value="permanent">Permanent</button></li>
+              <li><button class="filter-btn" data-value="part-time">Part-Time</button></li>
+              <li><button class="filter-btn" data-value="contract">Contract</button></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Company</h3>
+            <ul class="filter-list" data-filter="company">
+              <li><button class="filter-btn active" data-value="all">All Companies</button></li>
+              <li><button class="filter-btn" data-value="vital-synergy">Vital Synergy</button></li>
+              <li><button class="filter-btn" data-value="vital-heating">Vital Heating Solutions</button></li>
+            </ul>
+          </div>
+
+          <button class="filter-reset" id="filter-reset">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+            Reset Filters
+          </button>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="jobs-main">
+
+          <div class="jobs-count-bar">
+            <p class="jobs-count"><span id="jobs-visible-count">4</span> positions available</p>
+            <p class="jobs-updated">Updated June 2026</p>
+          </div>
+
+          <ul class="job-list" id="job-list" aria-label="Current job listings">
+
+            <!-- Site Manager -->
+            <li class="job-card" data-discipline="project-operations" data-type="permanent" data-company="vital-synergy">
+              <div class="job-card__main">
+                <div class="job-card__header">
+                  <h3 class="job-card__title">Site Manager</h3>
+                  <span class="job-card__company">Vital Synergy</span>
+                </div>
+                <ul class="job-card__meta" aria-label="Job details">
+                  <li class="job-tag job-tag--location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Ribble Valley HQ
+                  </li>
+                  <li class="job-tag job-tag--type">
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                    Permanent
+                  </li>
+                  <li class="job-tag job-tag--date">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    Closes: 30 June 2026
+                  </li>
+                </ul>
+                <p class="job-card__desc">Lead site operations for Vital Synergy's commercial M&amp;E projects across Lancashire. Manage subcontractors, maintain programme compliance, and ensure quality delivery on time and within budget.</p>
+                <div class="job-card__footer">
+                  <a href="/contact" class="btn btn--primary btn--sm">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="job-card__side">
+                <span class="job-badge job-badge--new">New</span>
+                <span class="job-employer-label">Vital Synergy</span>
+              </div>
+            </li>
+
+            <!-- Part-Time Bookkeeper -->
+            <li class="job-card" data-discipline="business-support" data-type="part-time" data-company="vital-synergy">
+              <div class="job-card__main">
+                <div class="job-card__header">
+                  <h3 class="job-card__title">Part-Time Bookkeeper</h3>
+                  <span class="job-card__company">Vital Synergy</span>
+                </div>
+                <ul class="job-card__meta" aria-label="Job details">
+                  <li class="job-tag job-tag--location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Ribble Valley HQ
+                  </li>
+                  <li class="job-tag job-tag--type">
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                    Part-Time
+                  </li>
+                  <li class="job-tag job-tag--date">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    Closes: 30 June 2026
+                  </li>
+                </ul>
+                <p class="job-card__desc">Support the finance function with day-to-day bookkeeping, invoice processing and reconciliation. Ideal for an experienced bookkeeper seeking flexible hours within a growing M&amp;E engineering company.</p>
+                <div class="job-card__footer">
+                  <a href="/contact" class="btn btn--primary btn--sm">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="job-card__side">
+                <span class="job-badge job-badge--new">New</span>
+                <span class="job-employer-label">Vital Synergy</span>
+              </div>
+            </li>
+
+            <!-- Electrical Estimator -->
+            <li class="job-card" data-discipline="project-operations" data-type="permanent" data-company="vital-synergy">
+              <div class="job-card__main">
+                <div class="job-card__header">
+                  <h3 class="job-card__title">Electrical Estimator</h3>
+                  <span class="job-card__company">Vital Synergy</span>
+                </div>
+                <ul class="job-card__meta" aria-label="Job details">
+                  <li class="job-tag job-tag--location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Read HQ
+                  </li>
+                  <li class="job-tag job-tag--type">
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                    Permanent
+                  </li>
+                  <li class="job-tag job-tag--date">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    Closes: 30 June 2026
+                  </li>
+                </ul>
+                <p class="job-card__desc">Prepare accurate tender submissions and costings for electrical and M&amp;E projects across Vital Synergy's commercial and industrial portfolio. Previous estimating experience in the building services sector is essential.</p>
+                <div class="job-card__footer">
+                  <a href="/contact" class="btn btn--primary btn--sm">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="job-card__side">
+                <span class="job-badge job-badge--new">New</span>
+                <span class="job-employer-label">Vital Synergy</span>
+              </div>
+            </li>
+
+            <!-- Reactive Gas Engineer -->
+            <li class="job-card" data-discipline="engineering-trades" data-type="permanent" data-company="vital-heating">
+              <div class="job-card__main">
+                <div class="job-card__header">
+                  <h3 class="job-card__title">Reactive Gas Engineer</h3>
+                  <span class="job-card__company job-card__company--alt">Vital Heating Solutions</span>
+                </div>
+                <ul class="job-card__meta" aria-label="Job details">
+                  <li class="job-tag job-tag--location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Burnley
+                  </li>
+                  <li class="job-tag job-tag--type">
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                    Permanent
+                  </li>
+                  <li class="job-tag job-tag--date">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    Closes: 30 June 2026
+                  </li>
+                </ul>
+                <p class="job-card__desc">Carry out reactive gas maintenance, boiler servicing and emergency callouts across a portfolio of domestic and commercial properties. Gas Safe registration is essential. Full driving licence required.</p>
+                <div class="job-card__footer">
+                  <a href="/contact" class="btn btn--primary btn--sm">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="job-card__side">
+                <span class="job-badge job-badge--new">New</span>
+                <span class="job-employer-label job-employer-label--alt">Vital Heating Solutions</span>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- No results state -->
+          <div class="jobs-empty" id="jobs-empty" hidden>
+            <div class="jobs-empty__icon">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </div>
+            <h3>No matching positions</h3>
+            <p>No current vacancies match your filters. Try adjusting your selection or <a href="/contact">register your interest</a> and we'll be in touch when something suitable comes up.</p>
+            <button class="filter-reset" id="filter-reset-empty">
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+              Clear Filters
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Register Interest -->
+    <section class="register-interest">
+      <div class="register-interest__inner container">
+        <div class="register-interest__content">
+          <p class="kicker">Can't Find the Right Role?</p>
+          <h2>Register Your Interest</h2>
+          <p>We're always growing. If you don't see a suitable vacancy today, get in touch and we'll keep your details on file for future opportunities across all Vital Synergy divisions.</p>
+          <a href="/contact" class="btn btn--primary">
+            Get in Touch
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="register-interest__list">
+          <ul class="check-list">
+            <li class="check-item">
+              <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+              <div class="check-item__body">
+                <p class="check-item__title">Roles Across All Divisions</p>
+                <p class="check-item__desc">From Vital Synergy to Vital Heating Solutions and beyond — we recruit across the full group.</p>
+              </div>
+            </li>
+            <li class="check-item">
+              <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+              <div class="check-item__body">
+                <p class="check-item__title">Fast Response</p>
+                <p class="check-item__desc">All enquiries are reviewed by the hiring team and responded to within two working days.</p>
+              </div>
+            </li>
+            <li class="check-item">
+              <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+              <div class="check-item__body">
+                <p class="check-item__title">Confidential Process</p>
+                <p class="check-item__desc">Your application is handled with complete discretion. We never contact your current employer without your permission.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="logo-img logo-img--footer">
+        </a>
+        <p class="footer__tagline">Vital Synergy's recruitment portal, connecting M&amp;E engineering talent with opportunities across the business.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="footer__col-heading">Services</p>
+          <ul>
+            <li><a href="/employers">For Employers</a></li>
+            <li><a href="/candidates">For Candidates</a></li>
+            <li><a href="/jobs.html">Browse Roles</a></li>
+            <li><a href="/candidate-login">Candidate Login</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-heading">Company</p>
+          <ul>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Connect with us on LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Contact us on WhatsApp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Follow us on Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Follow us on Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms &amp; Conditions</a>
+        </div>
+        <p class="footer__copyright">&copy; 2026 Vital Synergy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg class="back-to-top__ring" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="back-to-top__track" cx="27" cy="27" r="24"/>
+      <circle class="back-to-top__fill" id="scroll-progress" cx="27" cy="27" r="24"/>
+    </svg>
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/jobs.js" defer></script>
+</body>
+</html>
