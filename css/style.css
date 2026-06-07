@@ -1448,6 +1448,41 @@ footer {
   background: var(--cl-accent);
 }
 
+/* Role-based visibility (demo switcher) */
+.role-employer { display: none; }
+.role-candidate { display: none; }
+
+[data-role="employer"] .role-employer { display: block; }
+[data-role="employer"] .role-candidate { display: block; }
+[data-role="candidate"] .role-candidate { display: block; }
+[data-role="candidate"] .btn--register { display: none; }
+[data-role="visitor"] .btn--register { display: none; }
+
+.role-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--cl-text);
+  margin-right: auto;
+}
+
+.role-switcher__label { color: var(--cl-muted); }
+
+.role-switcher__btn {
+  background: var(--cl-primary);
+  color: var(--cl-white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.role-switcher__btn:hover { opacity: 0.8; }
+
 /* Back to top */
 
 .back-to-top {

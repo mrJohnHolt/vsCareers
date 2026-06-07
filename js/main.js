@@ -56,3 +56,20 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Demo role switcher
+const roles = ['visitor', 'employer'];
+const roleLabels = { visitor: 'Visitor', employer: 'Ops' };
+const roleBtn = document.getElementById('role-btn');
+const roleLabelEl = document.getElementById('role-label');
+
+let currentRole = sessionStorage.getItem('demoRole') || 'visitor';
+document.body.dataset.role = currentRole;
+if (roleLabelEl) roleLabelEl.textContent = roleLabels[currentRole];
+
+roleBtn?.addEventListener('click', () => {
+  currentRole = roles[(roles.indexOf(currentRole) + 1) % roles.length];
+  document.body.dataset.role = currentRole;
+  roleLabelEl.textContent = roleLabels[currentRole];
+  sessionStorage.setItem('demoRole', currentRole);
+});

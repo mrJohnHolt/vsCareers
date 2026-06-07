@@ -11,10 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-role="visitor">
 
   <div class="top-bar">
     <div class="top-bar__inner container">
+      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
+        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
+        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
+      </div>
       <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
         <i class="fa-solid fa-building" aria-hidden="true"></i>
         Employer Login
@@ -59,7 +63,7 @@
           <h1>Engineering Talent <span class="accent--hero">Placed Faster</span></h1>
           <p>Built by engineers, for engineers. Vital Synergy is Lancashire's leading Mechanical &amp; Electrical engineering company, placing skilled professionals from trades to senior leadership.</p>
           <div class="hero__actions">
-            <a href="/contact" class="btn btn--primary">
+            <a href="/contact" class="btn btn--primary btn--register">
               Register a Vacancy
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -75,7 +79,7 @@
     </section>
 
     <!-- Feature 1: For Employers -->
-    <section class="feature" id="employers">
+    <section class="feature role-employer" id="employers">
       <div class="feature__inner container">
         <div class="feature__image-stack">
           <div class="feature__image">
@@ -125,7 +129,7 @@
     </section>
 
     <!-- Feature 2: For Candidates -->
-    <section class="feature feature--alt" id="candidates">
+    <section class="feature feature--alt role-candidate" id="candidates">
       <div class="feature__inner container">
         <div class="feature__content">
           <p class="kicker">For Candidates</p>
@@ -271,7 +275,7 @@
     </section>
 
     <!-- Feature 3: Why Vital Synergy -->
-    <section class="feature" id="why-us">
+    <section class="feature role-candidate" id="why-us">
       <div class="feature__inner container">
         <div class="feature__image-stack">
           <div class="feature__image">
