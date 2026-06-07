@@ -340,6 +340,74 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav__cta:hover { background: var(--cl-secondary); color: var(--cl-white); transform: translateY(-1px); }
 .nav__cta:focus-visible { outline: 2px solid var(--cl-primary); outline-offset: 3px; border-radius: 50px; }
 
+/* Admin dropdown submenu */
+.nav__dropdown { position: relative; }
+
+.nav__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border-radius: 6px;
+  color: var(--cl-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.18s ease, background 0.18s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.nav__dropdown-toggle:hover,
+.nav__dropdown.open .nav__dropdown-toggle,
+.nav__dropdown:has(.active) .nav__dropdown-toggle {
+  color: var(--cl-primary);
+  background: rgba(18, 75, 138, 0.06);
+}
+
+.nav__dropdown-arrow {
+  font-size: 0.6rem;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.nav__dropdown.open .nav__dropdown-arrow { transform: rotate(180deg); }
+
+.nav__submenu {
+  display: none;
+  list-style: none;
+  padding: 0 0 0 1.5rem;
+  margin: 0;
+}
+
+.nav__dropdown.open .nav__submenu { display: block; }
+
+@media (min-width: 768px) {
+  .nav__dropdown-toggle { padding: 0.5rem 0.75rem; width: auto; }
+  .nav__dropdown-toggle .nav__icon { display: none; }
+  .nav__dropdown-arrow { margin-left: 0.25rem; }
+
+  .nav__submenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 150px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(18, 75, 138, 0.14);
+    border: 1px solid rgba(18, 75, 138, 0.08);
+    padding: 0.35rem 0;
+    z-index: 200;
+  }
+
+  .nav__submenu a { padding: 0.5rem 1rem !important; white-space: nowrap; border-radius: 0; }
+  .nav__submenu li:first-child a { border-radius: 8px 8px 0 0; }
+  .nav__submenu li:last-child a { border-radius: 0 0 8px 8px; }
+}
+
 /* Hero — home page: centred text + mockup below */
 
 .hero {

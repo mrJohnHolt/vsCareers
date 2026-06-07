@@ -8,10 +8,29 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', String(isOpen));
 });
 
+function closeAllDropdowns() {
+  document.querySelectorAll('.nav__dropdown.open').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded', 'false');
+  });
+}
+
+document.querySelectorAll('.nav__dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const dropdown = toggle.closest('.nav__dropdown');
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+});
+
 document.addEventListener('click', (e) => {
   if (!nav.contains(e.target)) {
     nav.classList.remove('nav--open');
     hamburger.setAttribute('aria-expanded', 'false');
+    closeAllDropdowns();
+  } else if (!e.target.closest('.nav__dropdown')) {
+    closeAllDropdowns();
   }
 });
 

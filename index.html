@@ -37,7 +37,15 @@
         <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
         <li><a href="/jobs.html"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
         <li><a href="/about.html#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
-        <li class="role-employer"><a href="/media.html"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
+        <li class="role-employer nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin<i class="fa-solid fa-chevron-down nav__dropdown-arrow" aria-hidden="true"></i>
+          </button>
+          <ul class="nav__submenu">
+            <li><a href="/media.html">Media</a></li>
+            <li><a href="/applications.html">Applicants</a></li>
+          </ul>
+        </li>
       </ul>
       <a href="tel:+441282773338" class="nav__phone">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
