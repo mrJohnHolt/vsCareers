@@ -3469,6 +3469,16 @@ footer {
   font-weight: 700;
   color: #22c55e;
 }
+.score-badge--shortlisted {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  color: #f59e0b;
+}
+.score-badge--rejected {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
 
 .status-badge {
   display: none;
@@ -3482,7 +3492,7 @@ footer {
 }
 
 .status-badge--shortlisted { background: #16a34a; color: #fff; }
-.status-badge--loved { background: #db2777; color: #fff; }
+.status-badge--progress { background: #7c3aed; color: #fff; }
 .status-badge--rejected { background: #4b5563; color: rgba(255, 255, 255, 0.70); }
 
 .applicant-actions {
@@ -3510,7 +3520,7 @@ footer {
 .action-btn:active { transform: scale(0.95); }
 .action-btn--reject:hover { background: rgba(239, 68, 68, 0.20); color: #ef4444; border-color: rgba(239, 68, 68, 0.50); }
 .action-btn--shortlist:hover { background: rgba(22, 163, 74, 0.20); color: #22c55e; border-color: rgba(22, 163, 74, 0.50); }
-.action-btn--love:hover { background: rgba(219, 39, 119, 0.20); color: #db2777; border-color: rgba(219, 39, 119, 0.50); }
+.action-btn--progress:hover { background: rgba(124, 58, 237, 0.20); color: #7c3aed; border-color: rgba(124, 58, 237, 0.50); }
 .action-btn:focus-visible { outline: 2px solid var(--cl-secondary); outline-offset: 2px; }
 
 /* ---- Column 3: Detail panel ---- */
@@ -3621,7 +3631,6 @@ footer {
 
 .kpi-ring--lg .kpi-ring__pct {
   font-size: 0.6875rem;
-  color: #22c55e;
 }
 
 .kpi-ring__name {
