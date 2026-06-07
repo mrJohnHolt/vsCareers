@@ -39,7 +39,15 @@ function avatarColor(name) {
 // Render vacancy list (column 1)
 function renderVacancies() {
   const list = document.getElementById('vacancy-list');
+  const select = document.getElementById('vacancy-select');
   const filtered = vacancies.filter(v => v.title.toLowerCase().includes(vacancySearch));
+
+  // Populate the mobile select
+  if (select) {
+    select.innerHTML = vacancies.map(v =>
+      `<option value="${v.id}" ${v.id === selectedVacancyId ? 'selected' : ''}>${v.title} — ${v.applicants} applicant${v.applicants !== 1 ? 's' : ''}</option>`
+    ).join('');
+  }
 
   if (!filtered.length) {
     list.innerHTML = '<p style="font-size:0.75rem;color:rgba(255,255,255,0.25);padding:1rem;text-align:center;">No vacancies found</p>';
@@ -356,6 +364,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderApplicants();
   renderDetail();
   initResizable();
+
+  document.getElementById('vacancy-select').addEventListener('change', e => {
+    selectVacancy(parseInt(e.target.value));
+  });
 
   document.getElementById('vacancy-search').addEventListener('input', e => {
     vacancySearch = e.target.value.toLowerCase();
