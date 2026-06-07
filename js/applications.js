@@ -226,11 +226,13 @@ function animateRings() {
 function renderDetail() {
   const emptyEl = document.getElementById('detail-empty');
   const contentEl = document.getElementById('detail-content');
+  const panelEl = document.getElementById('detail-panel');
 
   if (!selectedApplicantId) {
     emptyEl.style.display = '';
     contentEl.style.display = 'none';
     contentEl.innerHTML = '';
+    panelEl.classList.remove('detail-panel--active');
     return;
   }
 
@@ -239,8 +241,17 @@ function renderDetail() {
 
   emptyEl.style.display = 'none';
   contentEl.style.display = '';
+  panelEl.classList.add('detail-panel--active');
 
   contentEl.innerHTML = `
+    <div class="detail-profile-header">
+      <div class="detail-profile-header__avatar" style="background:${avatarColor(a.name)}">${getInitials(a.name)}</div>
+      <div class="detail-profile-header__info">
+        <div class="detail-profile-header__name">${a.name}</div>
+        <div class="detail-profile-header__sub">${a.email} &middot; ${a.phone}</div>
+      </div>
+      <div class="score-badge" style="${(c => `border-color:${c};background:${c}1a;color:${c}`)(a.score >= 80 ? '#2196D4' : a.score >= 70 ? '#8b5cf6' : '#EB5324')}">${a.score}%</div>
+    </div>
     <div class="detail-tabs">
       <button class="detail-tab ${activeDetailTab === 'profile' ? 'detail-tab--active' : ''}" data-dtab="profile">Profile</button>
       <button class="detail-tab ${activeDetailTab === 'resume' ? 'detail-tab--active' : ''}" data-dtab="resume">Resume</button>
