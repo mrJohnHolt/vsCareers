@@ -1288,11 +1288,29 @@ footer {
 /* Disciplines section */
 
 .disciplines {
-  background: var(--cl-light-bg);
+  position: relative;
   padding: var(--space-md) 0 var(--space-xl);
+  background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&h=1080&fit=crop&auto=format&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+  .disciplines { background-attachment: scroll; }
+}
+
+.disciplines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 38, 72, 0.82);
+  z-index: 0;
 }
 
 .disciplines__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -1302,10 +1320,16 @@ footer {
   text-align: center;
   max-width: 48ch;
   margin: 0 auto;
+  color: var(--cl-white);
 }
 
+.disciplines__heading .kicker { color: var(--cl-accent); }
+
+.disciplines__heading h2 { color: var(--cl-white); }
+.disciplines__heading h2 .accent--blue { color: var(--cl-secondary); }
+
 .disciplines__heading p:last-child {
-  color: var(--cl-muted);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 0.9375rem;
   margin-top: 0.75rem;
 }
@@ -1325,10 +1349,13 @@ footer {
 }
 
 .discipline-card {
-  background: var(--cl-white);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
   padding: var(--space-md);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
@@ -1338,11 +1365,11 @@ footer {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: rgba(18, 75, 138, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cl-primary);
+  color: var(--cl-white);
   font-size: 1.125rem;
   flex-shrink: 0;
 }
@@ -1350,7 +1377,7 @@ footer {
 .discipline-card__title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--cl-text);
+  color: var(--cl-white);
   line-height: 1.3;
 }
 
@@ -1365,7 +1392,7 @@ footer {
 
 .discipline-card__list li {
   font-size: 0.875rem;
-  color: var(--cl-muted);
+  color: rgba(255, 255, 255, 0.72);
   padding-left: 1rem;
   position: relative;
 }
