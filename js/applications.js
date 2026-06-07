@@ -143,6 +143,10 @@ function renderApplicants() {
         <span class="status-badge status-badge--${a.status}">${a.status}</span>
       </div>
       <div class="applicant-actions">
+        <div class="applicant-score-dist">
+          <span class="applicant-distance">${a.distance}</span>
+          <div class="score-badge score-badge--${a.status}" aria-label="Score: ${a.score}%">${a.score}%</div>
+        </div>
         <button class="action-btn action-btn--reject" data-applicant="${a.id}" data-action="rejected" aria-label="Reject ${a.name}">
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>

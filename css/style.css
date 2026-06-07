@@ -3450,6 +3450,13 @@ footer {
 
 .applicant-meta { display: none; }
 
+.applicant-score-dist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .applicant-distance {
   font-size: 0.625rem;
   color: rgba(255, 255, 255, 0.30);
@@ -3832,7 +3839,11 @@ footer {
   .applicant-list::-webkit-scrollbar { width: 3px; }
   .applicant-list::-webkit-scrollbar-track { background: transparent; }
   .applicant-list::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.12); border-radius: 2px; }
-  .applicant-actions { display: flex; }
+  .applicant-actions { display: flex; align-items: center; gap: 0.5rem; }
+
+  /* Hide score + distance from info column on desktop — shown in actions group instead */
+  .applicant-info .score-badge { display: none; }
+  .applicant-info .applicant-distance { display: none; }
 
   /* Column 3: Detail — 1fr when empty, 2fr when active */
   .detail-panel {
