@@ -14,7 +14,7 @@ node screenshot-mobile.mjs http://localhost:5501 mobile-index
 node screenshot-mobile.mjs http://localhost:5501/about.html mobile-about
 ```
 
-Then Read the saved PNG to view output. Always use port 5501.
+
 
 ## Client
 - Name: Vital Synergy

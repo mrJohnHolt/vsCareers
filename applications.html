@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-role="visitor">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/role-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vital Synergy ops dashboard - manage and review job applicants.">
+  <title>Applications | Vital Synergy Ops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar__inner container">
+      <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
+        <i class="fa-solid fa-building" aria-hidden="true"></i>
+        Employer Login
+      </a>
+      <a href="/candidate-login" class="top-bar__link">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Candidate Login
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
+        <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="logo-img">
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
+        <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
+        <li><a href="/jobs.html"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
+        <li><a href="/about.html#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li class="role-employer"><a href="/applications.html" class="active"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
+      </ul>
+      <a href="tel:+441282773338" class="nav__phone">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        01282 773 338
+      </a>
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="media-main media-main--apps">
+
+    <!-- Access Gate -->
+    <div class="ops-gate">
+      <div class="ops-gate__inner">
+        <div class="ops-gate__icon">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        </div>
+        <h2>Ops Access Required</h2>
+        <p>This dashboard is restricted to Vital Synergy operations staff only.</p>
+        <p class="ops-gate__hint">Use the <strong>Switch Role</strong> button in the top bar to access.</p>
+      </div>
+    </div>
+
+    <!-- Ops Dashboard -->
+    <div class="ops-dashboard" id="ops-dashboard">
+
+      <!-- Dashboard top bar -->
+      <div class="dash-topbar">
+        <div class="dash-topbar__left">
+          <span class="dash-badge">Ops Only</span>
+          <h1 class="dash-title">Applications</h1>
+        </div>
+        <div class="dash-topbar__right">
+          <button class="dash-action-btn" id="btn-export">
+            <i class="fa-solid fa-file-export" aria-hidden="true"></i>
+            Export
+          </button>
+        </div>
+      </div>
+
+      <!-- Three-column layout -->
+      <div class="apps-layout">
+
+        <!-- Column 1: Vacancy list -->
+        <div class="vacancies-panel">
+          <div class="vacancies-panel__header">
+            <input class="vacancies-panel__search" type="search" placeholder="Search vacancies..." id="vacancy-search" aria-label="Search vacancies">
+          </div>
+          <div class="vacancy-list" id="vacancy-list"></div>
+        </div>
+
+        <div class="apps-divider" aria-hidden="true"></div>
+
+        <!-- Column 2: Applicant list -->
+        <div class="applicants-panel">
+          <div class="applicants-panel__header">
+            <div class="applicants-panel__subheader">
+              <span class="applicants-panel__vacancy-title" id="applicants-vacancy-title">Select a vacancy</span>
+              <span class="applicants-panel__count" id="applicants-count"></span>
+            </div>
+            <div class="apps-tabs">
+              <button class="apps-tab apps-tab--active" data-tab="all">Applicants</button>
+              <button class="apps-tab" data-tab="shortlisted">Shortlisted</button>
+              <button class="apps-tab" data-tab="loved">Loved</button>
+              <button class="apps-tab" data-tab="rejected">Rejected</button>
+            </div>
+            <input class="applicants-panel__search" type="search" placeholder="Search applicants..." id="applicant-search" aria-label="Search applicants">
+          </div>
+          <div class="applicant-list" id="applicant-list"></div>
+        </div>
+
+        <div class="apps-divider" aria-hidden="true"></div>
+
+        <!-- Column 3: Applicant detail -->
+        <div class="detail-panel" id="detail-panel">
+          <div class="detail-empty" id="detail-empty">
+            <div class="detail-empty__icon">
+              <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+            </div>
+            <p>Select an applicant to view their profile</p>
+          </div>
+          <div class="detail-content" id="detail-content"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/applications.js" defer></script>
+</body>
+</html>
