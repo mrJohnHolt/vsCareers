@@ -122,8 +122,14 @@ function renderApplicants() {
     <div class="applicant-row ${a.id === selectedApplicantId ? 'applicant-row--active' : ''}" data-id="${a.id}">
       <div class="applicant-avatar" style="background:${avatarColor(a.name)}" aria-hidden="true">${getInitials(a.name)}</div>
       <div class="applicant-info">
-        <span class="applicant-name">${a.name}</span>
-        <span class="applicant-email"><i class="fa-solid fa-envelope" aria-hidden="true"></i>${a.email}</span>
+        <div class="applicant-info__top">
+          <span class="applicant-name">${a.name}</span>
+          <div class="score-badge" aria-label="Score: ${a.score}%">${a.score}%</div>
+        </div>
+        <div class="applicant-info__bottom">
+          <span class="applicant-email"><i class="fa-solid fa-envelope" aria-hidden="true"></i>${a.email}</span>
+          <span class="applicant-distance">${a.distance}</span>
+        </div>
       </div>
       <div class="applicant-meta">
         <span class="applicant-distance">${a.distance}</span>
