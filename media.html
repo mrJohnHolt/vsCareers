@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-role="visitor">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/role-init.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vital Synergy ops dashboard — manage and publish job media to social platforms.">
+  <title>Your Job Media | Vital Synergy Ops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar__inner container">
+      <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
+        <i class="fa-solid fa-building" aria-hidden="true"></i>
+        Employer Login
+      </a>
+      <a href="/candidate-login" class="top-bar__link">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Candidate Login
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
+        <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="logo-img">
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
+        <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
+        <li><a href="/jobs.html"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
+        <li><a href="/about.html#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li class="role-employer"><a href="/media.html" class="active"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
+      </ul>
+      <a href="tel:+441282773338" class="nav__phone">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        01282 773 338
+      </a>
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="media-main">
+
+    <!-- Access Gate -->
+    <div class="ops-gate">
+      <div class="ops-gate__inner">
+        <div class="ops-gate__icon">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        </div>
+        <h2>Ops Access Required</h2>
+        <p>This dashboard is restricted to Vital Synergy operations staff only.</p>
+        <p class="ops-gate__hint">Use the <strong>Switch Role</strong> button in the top bar to access.</p>
+      </div>
+    </div>
+
+    <!-- Ops Dashboard -->
+    <div class="ops-dashboard" id="ops-dashboard">
+
+      <!-- Dashboard top bar -->
+      <div class="dash-topbar">
+        <div class="dash-topbar__left">
+          <span class="dash-badge">Ops Only</span>
+          <h1 class="dash-title">Your Job Media</h1>
+        </div>
+        <div class="dash-topbar__right">
+          <button class="dash-action-btn" id="btn-refresh">
+            <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+            Refresh
+          </button>
+          <button class="dash-action-btn dash-action-btn--primary" id="btn-publish-all">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Publish All
+          </button>
+        </div>
+      </div>
+
+      <!-- Three-column body -->
+      <div class="dash-body">
+
+        <!-- LEFT: Job selector -->
+        <aside class="dash-sidebar">
+          <p class="dash-section-label">Vacancies</p>
+          <input class="dash-search" type="search" placeholder="Search roles…" id="dash-search" aria-label="Search vacancies">
+
+          <ul class="dash-job-list" id="dash-job-list" role="listbox" aria-label="Select a vacancy">
+
+            <li class="dash-job-item active" data-job="site-manager" role="option" aria-selected="true" tabindex="0">
+              <span class="dash-job-item__dot" aria-hidden="true"></span>
+              <div class="dash-job-item__info">
+                <p class="dash-job-item__title">Site Manager</p>
+                <p class="dash-job-item__meta">Ribble Valley · Permanent</p>
+              </div>
+              <span class="dash-job-item__status dash-job-item__status--live">Live</span>
+            </li>
+
+            <li class="dash-job-item" data-job="bookkeeper" role="option" aria-selected="false" tabindex="0">
+              <span class="dash-job-item__dot" aria-hidden="true"></span>
+              <div class="dash-job-item__info">
+                <p class="dash-job-item__title">Part-Time Bookkeeper</p>
+                <p class="dash-job-item__meta">Ribble Valley · Part-Time</p>
+              </div>
+              <span class="dash-job-item__status dash-job-item__status--live">Live</span>
+            </li>
+
+            <li class="dash-job-item" data-job="electrical-estimator" role="option" aria-selected="false" tabindex="0">
+              <span class="dash-job-item__dot" aria-hidden="true"></span>
+              <div class="dash-job-item__info">
+                <p class="dash-job-item__title">Electrical Estimator</p>
+                <p class="dash-job-item__meta">Read HQ · Permanent</p>
+              </div>
+              <span class="dash-job-item__status dash-job-item__status--live">Live</span>
+            </li>
+
+            <li class="dash-job-item" data-job="gas-engineer" role="option" aria-selected="false" tabindex="0">
+              <span class="dash-job-item__dot" aria-hidden="true"></span>
+              <div class="dash-job-item__info">
+                <p class="dash-job-item__title">Reactive Gas Engineer</p>
+                <p class="dash-job-item__meta">Burnley · Permanent</p>
+              </div>
+              <span class="dash-job-item__status dash-job-item__status--live">Live</span>
+            </li>
+
+          </ul>
+        </aside>
+
+        <!-- MIDDLE: Social preview + media gallery -->
+        <div class="dash-main">
+
+          <!-- Social Post Preview -->
+          <div class="dash-card">
+            <div class="dash-section-header">
+              <div class="dash-section-header__left">
+                <h2 class="dash-section-title">Social Post</h2>
+                <span class="dash-status-badge dash-status-badge--draft">Draft</span>
+              </div>
+              <div class="platform-tabs" id="platform-tabs" role="tablist" aria-label="Preview platform">
+                <button class="platform-tab active" data-platform="linkedin" role="tab" aria-selected="true" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </button>
+                <button class="platform-tab" data-platform="facebook" role="tab" aria-selected="false" title="Facebook">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </button>
+                <button class="platform-tab" data-platform="instagram" role="tab" aria-selected="false" title="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </button>
+                <button class="platform-tab" data-platform="twitter" role="tab" aria-selected="false" title="X / Twitter">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Branded social card -->
+            <div class="social-preview-card" id="social-preview">
+              <div class="social-preview-card__bg">
+                <img id="preview-img" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&h=500&fit=crop&auto=format&q=80" alt="">
+                <div class="social-preview-card__overlay"></div>
+              </div>
+              <div class="social-preview-card__header">
+                <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="social-preview-card__logo">
+                <span class="social-preview-card__pill">Now Hiring</span>
+              </div>
+              <div class="social-preview-card__content">
+                <p class="social-preview-card__kicker">Vital Synergy</p>
+                <h2 class="social-preview-card__title" id="preview-title">SITE MANAGER</h2>
+                <ul class="social-preview-card__meta" id="preview-meta" aria-label="Job details">
+                  <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ribble Valley, Lancashire</li>
+                  <li><i class="fa-regular fa-calendar" aria-hidden="true"></i> Closes: 30 June 2026</li>
+                  <li><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Permanent</li>
+                </ul>
+              </div>
+              <div class="social-preview-card__footer">
+                <span class="social-preview-card__url">vitalsynergy.co.uk/jobs</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- Caption editor -->
+            <div class="form-group">
+              <label class="dash-label" for="post-caption">Post Caption</label>
+              <textarea class="dash-input dash-textarea" id="post-caption" rows="3" aria-label="Social post caption">🔨 We're hiring a Site Manager! Join the Vital Synergy team in Ribble Valley. Permanent role, competitive package. Apply now 👇&#10;&#10;#MandE #Hiring #Lancashire #Engineering #SiteManager</textarea>
+            </div>
+          </div>
+
+          <!-- Job Media Gallery -->
+          <div class="dash-card">
+            <div class="dash-section-header">
+              <h2 class="dash-section-title">Job Media</h2>
+              <span class="dash-hint">Format-ready assets for each platform</span>
+            </div>
+            <div class="media-gallery">
+
+              <div class="media-item">
+                <div class="media-item__preview media-item__preview--linkedin">
+                  <div class="media-item__preview-content">
+                    <p class="media-item__preview-co">Vital Synergy</p>
+                    <p class="media-item__preview-title" id="gallery-title-0">SITE MANAGER</p>
+                    <p class="media-item__preview-loc" id="gallery-loc-0">Ribble Valley</p>
+                  </div>
+                  <div class="media-item__preview-stripe"></div>
+                </div>
+                <div class="media-item__footer">
+                  <span class="media-item__label">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    LinkedIn
+                    <span class="media-item__dims">1200×627</span>
+                  </span>
+                  <button class="media-item__dl" title="Download">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="media-item">
+                <div class="media-item__preview media-item__preview--instagram">
+                  <div class="media-item__preview-content">
+                    <p class="media-item__preview-co">Vital Synergy</p>
+                    <p class="media-item__preview-title" id="gallery-title-1">SITE MANAGER</p>
+                    <p class="media-item__preview-loc" id="gallery-loc-1">Ribble Valley</p>
+                  </div>
+                  <div class="media-item__preview-stripe"></div>
+                </div>
+                <div class="media-item__footer">
+                  <span class="media-item__label">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    Instagram
+                    <span class="media-item__dims">1080×1080</span>
+                  </span>
+                  <button class="media-item__dl" title="Download">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="media-item">
+                <div class="media-item__preview media-item__preview--story">
+                  <div class="media-item__preview-content">
+                    <p class="media-item__preview-co">Vital Synergy</p>
+                    <p class="media-item__preview-title" id="gallery-title-2">SITE MANAGER</p>
+                    <p class="media-item__preview-loc" id="gallery-loc-2">Ribble Valley</p>
+                  </div>
+                  <div class="media-item__preview-stripe"></div>
+                </div>
+                <div class="media-item__footer">
+                  <span class="media-item__label">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    Story
+                    <span class="media-item__dims">1080×1920</span>
+                  </span>
+                  <button class="media-item__dl" title="Download">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Actions + Platforms + Schedule + Description -->
+        <div class="dash-panel">
+
+          <!-- Job Actions -->
+          <div class="panel-block">
+            <p class="panel-block__title">Job Actions</p>
+            <div class="dash-actions">
+              <button class="dash-action-btn dash-action-btn--primary">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i> Promote
+              </button>
+              <button class="dash-action-btn">
+                <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share
+              </button>
+              <button class="dash-action-btn">
+                <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit
+              </button>
+            </div>
+          </div>
+
+          <!-- Post to Socials -->
+          <div class="panel-block">
+            <p class="panel-block__title">Post to Socials</p>
+            <div class="platform-toggles">
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--linkedin" aria-hidden="true">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </span>
+                  LinkedIn
+                </div>
+                <label class="toggle-switch" aria-label="Post to LinkedIn">
+                  <input type="checkbox" checked>
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--facebook" aria-hidden="true">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </span>
+                  Facebook
+                </div>
+                <label class="toggle-switch" aria-label="Post to Facebook">
+                  <input type="checkbox" checked>
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--instagram" aria-hidden="true">
+                    <i class="fa-brands fa-instagram"></i>
+                  </span>
+                  Instagram
+                </div>
+                <label class="toggle-switch" aria-label="Post to Instagram">
+                  <input type="checkbox">
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--twitter" aria-hidden="true">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  X / Twitter
+                </div>
+                <label class="toggle-switch" aria-label="Post to X / Twitter">
+                  <input type="checkbox">
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Post to Job Boards -->
+          <div class="panel-block">
+            <p class="panel-block__title">Post to Job Boards</p>
+            <div class="platform-toggles">
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--indeed" aria-hidden="true">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  Indeed
+                </div>
+                <label class="toggle-switch" aria-label="Post to Indeed">
+                  <input type="checkbox" checked>
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+              <div class="platform-toggle-item">
+                <div class="platform-toggle-item__left">
+                  <span class="platform-icon platform-icon--google" aria-hidden="true">
+                    <i class="fa-brands fa-google"></i>
+                  </span>
+                  Google Jobs
+                </div>
+                <label class="toggle-switch" aria-label="Post to Google Jobs">
+                  <input type="checkbox">
+                  <span class="toggle-switch__slider"></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="panel-block">
+            <p class="panel-block__title">Schedule Post</p>
+            <div class="schedule-inputs">
+              <input type="date" class="dash-input" value="2026-06-08" aria-label="Date">
+              <input type="time" class="dash-input" value="09:00" aria-label="Time">
+            </div>
+            <div class="panel-actions">
+              <button class="btn btn--glass btn--sm">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> Schedule
+              </button>
+              <button class="btn btn--primary btn--sm">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i> Post Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Job Description -->
+          <div class="panel-block">
+            <p class="panel-block__title">Job Description</p>
+            <p class="job-desc-text" id="job-desc">Lead site operations for Vital Synergy's commercial M&amp;E projects across Lancashire. Manage subcontractors, maintain programme compliance, and ensure quality delivery on time and within budget.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/media.js" defer></script>
+</body>
+</html>

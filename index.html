@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-role="visitor">
 <head>
   <meta charset="UTF-8">
+  <script src="js/role-init.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Vital Synergy M&E Recruitment Portal. Find and apply for building services and M&E engineering roles across Lancashire's commercial, industrial and public sector projects.">
   <title>Vital Synergy | M&amp;E Recruitment Portal</title>
@@ -11,14 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-role="visitor">
+<body>
 
   <div class="top-bar">
     <div class="top-bar__inner container">
-      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
-        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
-        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
-      </div>
       <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
         <i class="fa-solid fa-building" aria-hidden="true"></i>
         Employer Login
@@ -39,8 +36,8 @@
         <li><a href="/" class="active"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
         <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
         <li><a href="/jobs.html"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
-        <li><a href="/support"><i class="fa-solid fa-headset nav__icon" aria-hidden="true"></i>Support</a></li>
-        <li><a href="/contact"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li><a href="/about.html#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li class="role-employer"><a href="/media.html"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
       </ul>
       <a href="tel:+441282773338" class="nav__phone">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
@@ -64,7 +61,7 @@
           <h1>Engineering Talent <span class="accent--hero">Placed Faster</span></h1>
           <p>Built by engineers, for engineers. Vital Synergy is Lancashire's leading Mechanical &amp; Electrical engineering company, placing skilled professionals from trades to senior leadership.</p>
           <div class="hero__actions">
-            <a href="/contact" class="btn btn--primary btn--register">
+            <a href="/about.html#contact-form" class="btn btn--primary btn--register">
               Register a Vacancy
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -451,8 +448,8 @@
           <p class="footer__col-heading">Company</p>
           <ul>
             <li><a href="/about.html">About Us</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/contact">Contact</a></li>
+
+            <li><a href="/about.html#contact-form">Contact</a></li>
           </ul>
         </div>
       </div>

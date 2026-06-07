@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-role="visitor">
 <head>
   <meta charset="UTF-8">
+  <script src="js/role-init.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About Vital Synergy, Lancashire's leading Mechanical &amp; Electrical engineering company. Meet the team, understand the values, and learn how the portal works.">
   <title>About | Vital Synergy M&amp;E Engineering</title>
@@ -11,14 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-role="visitor">
+<body>
 
   <div class="top-bar">
     <div class="top-bar__inner container">
-      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
-        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
-        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
-      </div>
       <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
         <i class="fa-solid fa-building" aria-hidden="true"></i>
         Employer Login
@@ -39,8 +36,8 @@
         <li><a href="/"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
         <li><a href="/about.html" class="active"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
         <li><a href="/jobs.html"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
-        <li><a href="/support"><i class="fa-solid fa-newspaper nav__icon" aria-hidden="true"></i>Support</a></li>
-        <li><a href="/contact"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li><a href="#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li class="role-employer"><a href="/media.html"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
       </ul>
       <a href="tel:+441282773338" class="nav__phone">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
@@ -239,6 +236,28 @@
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
           </div>
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&h=200&fit=crop&auto=format&q=80" alt="Technical Director" loading="lazy">
+            </div>
+            <p class="team-card__name">[Name]</p>
+            <p class="team-card__role">Technical Director</p>
+            <p class="team-card__bio">Sets the technical standards across all Vital Synergy divisions, with hands-on experience spanning mechanical, electrical and HVAC disciplines.</p>
+            <a href="#" class="team-card__social" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&auto=format&q=80" alt="Client Services Manager" loading="lazy">
+            </div>
+            <p class="team-card__name">[Name]</p>
+            <p class="team-card__role">Client Services Manager</p>
+            <p class="team-card__bio">Manages employer relationships across the portal, ensuring every hiring team gets the shortlists, support and communication they need.</p>
+            <a href="#" class="team-card__social" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -333,6 +352,106 @@
       </div>
     </section>
 
+    <!-- Contact Form -->
+    <section class="contact-form-section" id="contact-form">
+      <div class="contact-form-section__inner container">
+
+        <div class="contact-form-section__heading">
+          <p class="kicker">Get In Touch</p>
+          <h2>Send Us a <span class="accent--blue">Message</span></h2>
+          <p>Whether you're looking for your next role or want to discuss a vacancy, we'd love to hear from you. Fill in the form and we'll be in touch within one working day.</p>
+        </div>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          novalidate
+          id="contact-form-el"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+              <input
+                class="form-input"
+                type="text"
+                id="cf-name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+                autocomplete="name"
+              >
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+              <input
+                class="form-input"
+                type="email"
+                id="cf-email"
+                name="email"
+                placeholder="jane@example.com"
+                required
+                autocomplete="email"
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">Phone Number <span class="form-label__optional">(optional)</span></label>
+              <input
+                class="form-input"
+                type="tel"
+                id="cf-phone"
+                name="phone"
+                placeholder="07700 900 000"
+                autocomplete="tel"
+              >
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-enquiry">Enquiry Type <span aria-hidden="true">*</span></label>
+              <select class="form-input form-select" id="cf-enquiry" name="enquiry" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="job-application">Job Application</option>
+                <option value="register-interest">Register Interest</option>
+                <option value="post-vacancy">Post a Vacancy</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Message <span aria-hidden="true">*</span></label>
+            <textarea
+              class="form-input form-textarea"
+              id="cf-message"
+              name="message"
+              placeholder="Tell us a bit about yourself or your requirements…"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-footer">
+            <p class="form-disclaimer">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+              Your details are kept confidential and will never be shared with third parties.
+            </p>
+            <button type="submit" class="btn btn--primary">
+              Send Message
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="form-success" id="form-success" hidden>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <p>Thanks — we'll be in touch within one working day.</p>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
   </main>
 
   <footer id="contact">
@@ -357,8 +476,8 @@
           <p class="footer__col-heading">Company</p>
           <ul>
             <li><a href="/about.html">About Us</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/contact">Contact</a></li>
+
+            <li><a href="#contact-form">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -395,5 +514,21 @@
   </button>
 
   <script src="js/main.js" defer></script>
+  <script>
+    const form = document.getElementById('contact-form-el');
+    const success = document.getElementById('form-success');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (res.ok) {
+          form.querySelectorAll('input, select, textarea, button[type="submit"]').forEach(el => el.disabled = true);
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+  </script>
 </body>
 </html>

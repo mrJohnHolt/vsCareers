@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-role="visitor">
 <head>
   <meta charset="UTF-8">
+  <script src="js/role-init.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Current job opportunities at Vital Synergy. Browse live vacancies across M&E engineering, trades, project management and business support roles in Lancashire.">
   <title>Current Opportunities | Vital Synergy M&amp;E Engineering</title>
@@ -11,14 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-role="visitor">
+<body>
 
   <div class="top-bar">
     <div class="top-bar__inner container">
-      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
-        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
-        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
-      </div>
       <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
         <i class="fa-solid fa-building" aria-hidden="true"></i>
         Employer Login
@@ -39,8 +36,8 @@
         <li><a href="/"><i class="fa-solid fa-house nav__icon" aria-hidden="true"></i>Home</a></li>
         <li><a href="/about.html"><i class="fa-solid fa-circle-info nav__icon" aria-hidden="true"></i>About</a></li>
         <li><a href="/jobs.html" class="active"><i class="fa-solid fa-briefcase nav__icon" aria-hidden="true"></i>Jobs</a></li>
-        <li><a href="/support"><i class="fa-solid fa-headset nav__icon" aria-hidden="true"></i>Support</a></li>
-        <li><a href="/contact"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li><a href="/about.html#contact-form"><i class="fa-solid fa-envelope nav__icon" aria-hidden="true"></i>Contact Us</a></li>
+        <li class="role-employer"><a href="/media.html"><i class="fa-solid fa-gauge nav__icon" aria-hidden="true"></i>Admin</a></li>
       </ul>
       <a href="tel:+441282773338" class="nav__phone">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
@@ -102,7 +99,7 @@
             <ul class="filter-list" data-filter="company">
               <li><button class="filter-btn active" data-value="all">All Companies</button></li>
               <li><button class="filter-btn" data-value="vital-synergy">Vital Synergy</button></li>
-              <li><button class="filter-btn" data-value="vital-heating">Vital Heating Solutions</button></li>
+              <li><button class="filter-btn" data-value="vital-synergy-2">Vital Synergy</button></li>
             </ul>
           </div>
 
@@ -145,7 +142,7 @@
                 </ul>
                 <p class="job-card__desc">Lead site operations for Vital Synergy's commercial M&amp;E projects across Lancashire. Manage subcontractors, maintain programme compliance, and ensure quality delivery on time and within budget.</p>
                 <div class="job-card__footer">
-                  <a href="/contact" class="btn btn--primary btn--sm">
+                  <a href="/about.html#contact-form" class="btn btn--primary btn--sm">
                     Apply Now
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -180,7 +177,7 @@
                 </ul>
                 <p class="job-card__desc">Support the finance function with day-to-day bookkeeping, invoice processing and reconciliation. Ideal for an experienced bookkeeper seeking flexible hours within a growing M&amp;E engineering company.</p>
                 <div class="job-card__footer">
-                  <a href="/contact" class="btn btn--primary btn--sm">
+                  <a href="/about.html#contact-form" class="btn btn--primary btn--sm">
                     Apply Now
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -215,7 +212,7 @@
                 </ul>
                 <p class="job-card__desc">Prepare accurate tender submissions and costings for electrical and M&amp;E projects across Vital Synergy's commercial and industrial portfolio. Previous estimating experience in the building services sector is essential.</p>
                 <div class="job-card__footer">
-                  <a href="/contact" class="btn btn--primary btn--sm">
+                  <a href="/about.html#contact-form" class="btn btn--primary btn--sm">
                     Apply Now
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -228,11 +225,11 @@
             </li>
 
             <!-- Reactive Gas Engineer -->
-            <li class="job-card" data-discipline="engineering-trades" data-type="permanent" data-company="vital-heating">
+            <li class="job-card" data-discipline="engineering-trades" data-type="permanent" data-company="vital-synergy">
               <div class="job-card__main">
                 <div class="job-card__header">
                   <h3 class="job-card__title">Reactive Gas Engineer</h3>
-                  <span class="job-card__company job-card__company--alt">Vital Heating Solutions</span>
+                  <span class="job-card__company">Vital Synergy</span>
                 </div>
                 <ul class="job-card__meta" aria-label="Job details">
                   <li class="job-tag job-tag--location">
@@ -250,7 +247,7 @@
                 </ul>
                 <p class="job-card__desc">Carry out reactive gas maintenance, boiler servicing and emergency callouts across a portfolio of domestic and commercial properties. Gas Safe registration is essential. Full driving licence required.</p>
                 <div class="job-card__footer">
-                  <a href="/contact" class="btn btn--primary btn--sm">
+                  <a href="/about.html#contact-form" class="btn btn--primary btn--sm">
                     Apply Now
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -258,7 +255,7 @@
               </div>
               <div class="job-card__side">
                 <span class="job-badge job-badge--new">New</span>
-                <span class="job-employer-label job-employer-label--alt">Vital Heating Solutions</span>
+                <span class="job-employer-label">Vital Synergy</span>
               </div>
             </li>
 
@@ -270,7 +267,7 @@
               <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </div>
             <h3>No matching positions</h3>
-            <p>No current vacancies match your filters. Try adjusting your selection or <a href="/contact">register your interest</a> and we'll be in touch when something suitable comes up.</p>
+            <p>No current vacancies match your filters. Try adjusting your selection or <a href="/about.html#contact-form">register your interest</a> and we'll be in touch when something suitable comes up.</p>
             <button class="filter-reset" id="filter-reset-empty">
               <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
               Clear Filters
@@ -288,7 +285,7 @@
           <p class="kicker">Can't Find the Right Role?</p>
           <h2>Register Your Interest</h2>
           <p>We're always growing. If you don't see a suitable vacancy today, get in touch and we'll keep your details on file for future opportunities across all Vital Synergy divisions.</p>
-          <a href="/contact" class="btn btn--primary">
+          <a href="/about.html#contact-form" class="btn btn--primary">
             Get in Touch
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
@@ -299,7 +296,7 @@
               <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
               <div class="check-item__body">
                 <p class="check-item__title">Roles Across All Divisions</p>
-                <p class="check-item__desc">From Vital Synergy to Vital Heating Solutions and beyond — we recruit across the full group.</p>
+                <p class="check-item__desc">We recruit across all Vital Synergy divisions — from engineering trades to business support and leadership.</p>
               </div>
             </li>
             <li class="check-item">
@@ -345,8 +342,8 @@
           <p class="footer__col-heading">Company</p>
           <ul>
             <li><a href="/about.html">About Us</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/contact">Contact</a></li>
+
+            <li><a href="/about.html#contact-form">Contact</a></li>
           </ul>
         </div>
       </div>

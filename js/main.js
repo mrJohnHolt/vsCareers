@@ -45,31 +45,37 @@ const backToTop = document.getElementById('back-to-top');
 const progressRing = document.getElementById('scroll-progress');
 const circumference = 2 * Math.PI * 24;
 
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const progress = Math.min(scrolled / total, 1);
-  progressRing.style.strokeDashoffset = circumference - progress * circumference;
-  backToTop.classList.toggle('is-visible', scrolled > 200);
-}, { passive: true });
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = Math.min(scrolled / total, 1);
+    if (progressRing) progressRing.style.strokeDashoffset = circumference - progress * circumference;
+    backToTop.classList.toggle('is-visible', scrolled > 200);
+  }, { passive: true });
 
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
-// Demo role switcher
+// Role switcher — injected once here, never duplicated in HTML
 const roles = ['visitor', 'employer'];
 const roleLabels = { visitor: 'Visitor', employer: 'Ops' };
-const roleBtn = document.getElementById('role-btn');
-const roleLabelEl = document.getElementById('role-label');
+let currentRole = document.documentElement.dataset.role || 'visitor';
 
-let currentRole = sessionStorage.getItem('demoRole') || 'visitor';
-document.body.dataset.role = currentRole;
-if (roleLabelEl) roleLabelEl.textContent = roleLabels[currentRole];
+const topBarInner = document.querySelector('.top-bar__inner');
+if (topBarInner) {
+  const switcher = document.createElement('div');
+  switcher.className = 'role-switcher';
+  switcher.setAttribute('aria-label', 'Demo role switcher');
+  switcher.innerHTML = `<span class="role-switcher__label">Viewing as: <strong id="role-label">${roleLabels[currentRole]}</strong></span><button class="role-switcher__btn" id="role-btn">Switch Role</button>`;
+  topBarInner.prepend(switcher);
 
-roleBtn?.addEventListener('click', () => {
-  currentRole = roles[(roles.indexOf(currentRole) + 1) % roles.length];
-  document.body.dataset.role = currentRole;
-  roleLabelEl.textContent = roleLabels[currentRole];
-  sessionStorage.setItem('demoRole', currentRole);
-});
+  document.getElementById('role-btn').addEventListener('click', () => {
+    currentRole = roles[(roles.indexOf(currentRole) + 1) % roles.length];
+    document.documentElement.dataset.role = currentRole;
+    document.getElementById('role-label').textContent = roleLabels[currentRole];
+    sessionStorage.setItem('demoRole', currentRole);
+  });
+}
