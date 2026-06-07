@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Vital Synergy, the recruitment platform connecting Lancashire employers with local talent. Our story, values, and team.">
-  <title>About Us | Vital Synergy Recruitment Platform</title>
+  <meta name="description" content="About Vital Synergy, Lancashire's leading Mechanical &amp; Electrical engineering company. Meet the team, understand the values, and learn how the portal works.">
+  <title>About | Vital Synergy M&amp;E Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-role="visitor">
 
   <div class="top-bar">
     <div class="top-bar__inner container">
+      <div class="role-switcher" id="role-switcher" aria-label="Demo role switcher">
+        <span class="role-switcher__label">Viewing as: <strong id="role-label">Visitor</strong></span>
+        <button class="role-switcher__btn" id="role-btn">Switch Role</button>
+      </div>
       <a href="/employer-login" class="top-bar__link top-bar__link--hidden">
         <i class="fa-solid fa-building" aria-hidden="true"></i>
         Employer Login
@@ -55,25 +59,26 @@
     <section class="hero hero--split" id="about-hero">
       <div class="hero__inner container">
         <div class="hero__text">
-          <h1>Empowering Your <span class="accent--blue">Hiring Success</span></h1>
-          <p>Streamline your recruitment for faster, more effective hiring across Lancashire.</p>
-          <a href="/contact" class="btn btn--primary">
-            Contact Us
+          <p class="kicker">Vital Synergy M&amp;E Engineering</p>
+          <h1>Built on Engineering. <span class="accent--hero">Built for Lancashire.</span></h1>
+          <p>Vital Synergy is Lancashire's leading Mechanical &amp; Electrical engineering company, placing skilled professionals from trades to senior leadership across the region's commercial, industrial and public sector projects.</p>
+          <a href="/jobs" class="btn btn--primary">
+            View Open Roles
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
         <div class="hero__images">
           <div class="hero__img-wrap">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&auto=format&q=80" alt="Lancashire business team" loading="eager">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop&auto=format&q=80" alt="M&E engineer at work" loading="eager">
           </div>
           <div class="hero__img-wrap">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&auto=format&q=80" alt="Modern office" loading="eager">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop&auto=format&q=80" alt="Building services installation" loading="eager">
           </div>
           <div class="hero__img-wrap">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format&q=80" alt="Professionals collaborating" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&auto=format&q=80" alt="Engineering team meeting" loading="lazy">
           </div>
           <div class="hero__img-wrap">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&auto=format&q=80" alt="Business meeting" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&auto=format&q=80" alt="Vital Synergy team" loading="lazy">
           </div>
         </div>
       </div>
@@ -83,48 +88,48 @@
     <section class="values" id="values">
       <div class="values__inner container">
         <div class="values__heading">
-          <p class="kicker">Your Trusted Partner</p>
-          <h2>The Things We <span class="accent">Care</span> About</h2>
+          <p class="kicker">What Drives Us</p>
+          <h2>The Standards Vital Synergy <span class="accent--blue">Works To</span></h2>
         </div>
         <div class="values__grid">
 
           <div class="value-card">
             <div class="value-card__icon">
-              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Candidate Experience</h3>
-              <p class="value-card__desc">Job seekers are more than just numbers. We are committed to ensuring each candidate has a positive and enriching experience.</p>
+              <h3 class="value-card__title">Safety First</h3>
+              <p class="value-card__desc">Every engineer placed by Vital Synergy carries the correct certifications and works to the highest safety standards on site.</p>
             </div>
           </div>
 
           <div class="value-card">
             <div class="value-card__icon">
-              <i class="fa-solid fa-gem" aria-hidden="true"></i>
+              <i class="fa-solid fa-wrench" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Value Creation</h3>
-              <p class="value-card__desc">Every interaction matters. We strive to deliver exceptional value to both employers and job seekers.</p>
+              <h3 class="value-card__title">Technical Excellence</h3>
+              <p class="value-card__desc">Vital Synergy recruits specialists with genuine M&amp;E expertise, from qualified trades to senior design and project leadership.</p>
             </div>
           </div>
 
           <div class="value-card">
             <div class="value-card__icon">
-              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Simplified Hiring</h3>
-              <p class="value-card__desc">Recruitment doesn't have to be a headache. We cut through the complexity, focusing on what truly matters.</p>
+              <h3 class="value-card__title">Lancashire Roots</h3>
+              <p class="value-card__desc">Rooted in Lancashire, Vital Synergy builds a skilled local workforce that serves the communities and projects it works within.</p>
             </div>
           </div>
 
           <div class="value-card">
             <div class="value-card__icon">
-              <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Raising Standards</h3>
-              <p class="value-card__desc">We challenge low-quality providers by setting high standards in the recruitment industry.</p>
+              <h3 class="value-card__title">Compliance Assured</h3>
+              <p class="value-card__desc">Gas Safe, F-Gas, CSCS, SMSTS and all relevant credentials are verified before any engineer joins the team or enters a project site.</p>
             </div>
           </div>
 
@@ -133,18 +138,18 @@
               <i class="fa-solid fa-handshake" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Trust and Transparency</h3>
-              <p class="value-card__desc">Honest communication and accurate information foster trust with every interaction.</p>
+              <h3 class="value-card__title">Honest Communication</h3>
+              <p class="value-card__desc">Candidates and hiring managers receive straightforward, timely updates at every stage of the process. No jargon, no delays.</p>
             </div>
           </div>
 
           <div class="value-card">
             <div class="value-card__icon">
-              <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i>
             </div>
             <div class="value-card__body">
-              <h3 class="value-card__title">Continuous Innovation</h3>
-              <p class="value-card__desc">We embrace innovation to increase recruitment efficiency and effectiveness.</p>
+              <h3 class="value-card__title">Developing Talent</h3>
+              <p class="value-card__desc">From apprentices to senior engineers, Vital Synergy invests in the development of M&amp;E talent at every level of the business.</p>
             </div>
           </div>
 
@@ -158,38 +163,24 @@
         <div class="story-images">
           <div class="story-images__grid">
             <div class="story-images__img">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=800&fit=crop&auto=format&q=80" alt="Vital Synergy team" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=800&fit=crop&auto=format&q=80" alt="M&E engineering work" loading="lazy">
             </div>
             <div class="story-images__img">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=800&fit=crop&auto=format&q=80" alt="Lancashire business" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=800&fit=crop&auto=format&q=80" alt="Building services project" loading="lazy">
             </div>
           </div>
           <div class="story-images__badge">
-            <span class="story-images__badge-num">4+</span>
-            <span class="story-images__badge-label">Years Experience</span>
+            <span class="story-images__badge-num">20+</span>
+            <span class="story-images__badge-label">Years in M&amp;E</span>
           </div>
         </div>
         <div class="feature__content">
           <p class="kicker">Our Journey</p>
           <span class="feature__accent"></span>
           <h2>The Vital Synergy <span class="accent--blue">Story</span></h2>
-          <p>Founded to transform the job search landscape, Vital Synergy was born out of a vision to connect exceptional local talent with ambitious Lancashire businesses.</p>
-          <p>Recognising the struggles faced by many candidates in navigating their career paths, we set out to create a comprehensive talent ecosystem that fosters positive experiences for both job seekers and employers.</p>
-          <p>We are committed to bridging the gap between talent and opportunity, ensuring that both sides achieve remarkable results and succeed together.</p>
-          <div class="story-stats">
-            <div class="story-stat">
-              <span class="story-stat__num">2021</span>
-              <span class="story-stat__label">Founding Year</span>
-            </div>
-            <div class="story-stat">
-              <span class="story-stat__num">100K+</span>
-              <span class="story-stat__label">Candidates</span>
-            </div>
-            <div class="story-stat">
-              <span class="story-stat__num">2,500+</span>
-              <span class="story-stat__label">Job Vacancies</span>
-            </div>
-          </div>
+          <p>Founded in Lancashire, Vital Synergy has grown from a specialist M&amp;E engineering company into one of the region's leading building services employers. The business was built on a commitment to quality, compliance and developing local engineering talent.</p>
+          <p>Vital Synergy operates across the full spectrum of Mechanical &amp; Electrical engineering, from gas and HVAC to design, project management, procurement and compliance, placing skilled professionals into roles that match their expertise and ambition.</p>
+          <p>This recruitment portal represents the next step: a direct, transparent route for candidates to find their place within Vital Synergy and for operational teams to manage and grow their workforce efficiently.</p>
         </div>
       </div>
     </section>
@@ -199,39 +190,50 @@
       <div class="team__split container">
         <div class="team__intro">
           <p class="kicker">Meet the Team</p>
-          <h2>Behind the Scenes: The <span class="accent--blue">Minds</span> at Vital Synergy</h2>
-          <p>With years of experience and a passion for innovation, we are dedicated to delivering top recruitment solutions that meet and exceed expectations.</p>
+          <h2>The People Behind <span class="accent--blue">Vital Synergy</span></h2>
+          <p>Vital Synergy's leadership team brings together deep M&amp;E sector knowledge, operational experience and a shared commitment to building a skilled Lancashire workforce.</p>
         </div>
         <div class="team__cards">
           <div class="team-card">
             <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&auto=format&q=80" alt="Founder and CEO" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&auto=format&q=80" alt="Managing Director" loading="lazy">
             </div>
             <p class="team-card__name">[Name]</p>
-            <p class="team-card__role">Founder &amp; CEO</p>
-            <p class="team-card__bio">Expert recruiter with 20 years of experience in international talent acquisition and hiring.</p>
+            <p class="team-card__role">Managing Director</p>
+            <p class="team-card__bio">Responsible for the strategic direction of Vital Synergy, with extensive experience in M&amp;E building services across the North West.</p>
             <a href="#" class="team-card__social" aria-label="LinkedIn profile">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
           </div>
           <div class="team-card">
             <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format&q=80" alt="Chief Commercial Officer" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format&q=80" alt="Operations Manager" loading="lazy">
             </div>
             <p class="team-card__name">[Name]</p>
-            <p class="team-card__role">Chief Commercial Officer</p>
-            <p class="team-card__bio">Over 20 years of experience in financial services and credit risk data analytics.</p>
+            <p class="team-card__role">Operations Manager</p>
+            <p class="team-card__bio">Oversees day-to-day operations across all Vital Synergy divisions, ensuring projects run on time and to specification.</p>
             <a href="#" class="team-card__social" aria-label="LinkedIn profile">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
           </div>
           <div class="team-card">
             <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=200&h=200&fit=crop&auto=format&q=80" alt="Senior Developer" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=200&h=200&fit=crop&auto=format&q=80" alt="Recruitment Lead" loading="lazy">
             </div>
             <p class="team-card__name">[Name]</p>
-            <p class="team-card__role">Senior Developer</p>
-            <p class="team-card__bio">Specialist in AI engineering, designing and deploying cutting-edge solutions.</p>
+            <p class="team-card__role">Recruitment Lead</p>
+            <p class="team-card__bio">Manages the talent acquisition pipeline, matching qualified M&amp;E engineers to the right roles within the Vital Synergy business.</p>
+            <a href="#" class="team-card__social" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format&q=80" alt="QHSE Manager" loading="lazy">
+            </div>
+            <p class="team-card__name">[Name]</p>
+            <p class="team-card__role">QHSE Manager</p>
+            <p class="team-card__bio">Leads on quality, health, safety and environmental compliance, ensuring every engineer meets the required certification standards.</p>
             <a href="#" class="team-card__social" aria-label="LinkedIn profile">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
@@ -240,44 +242,44 @@
       </div>
     </section>
 
-    <!-- Platform Benefits / Who Are We -->
+    <!-- Who Are We -->
     <section class="feature feature--alt" id="who-we-are">
       <div class="feature__inner container">
         <div class="feature__image">
-          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&h=700&fit=crop&auto=format&q=80" alt="Vital Synergy platform team" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&h=700&fit=crop&auto=format&q=80" alt="Vital Synergy engineering team" loading="lazy">
         </div>
         <div class="feature__content">
-          <p class="kicker">Who Are We?</p>
+          <p class="kicker">What Sets Vital Synergy Apart</p>
           <span class="feature__accent"></span>
-          <h2>A Company That Believes in Delivering a <span class="accent">Great</span> Experience</h2>
-          <p>At Vital Synergy, we redefine your job search and hiring experience, ensuring that finding the right fit is not just a possibility, it is a reality.</p>
+          <h2>A Company That Puts <span class="accent--blue">Engineers First</span></h2>
+          <p>Vital Synergy does not rely on generic job boards or external agencies. The recruitment portal connects candidates directly with the business, cutting out delays and ensuring every role is filled by someone who genuinely fits.</p>
           <ul class="check-list">
             <li class="check-item">
               <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
               <div class="check-item__body">
-                <p class="check-item__title">Tailored Matching</p>
-                <p class="check-item__desc">Get personalised job recommendations that suit your skills and aspirations perfectly.</p>
+                <p class="check-item__title">Compliance-Verified Engineers</p>
+                <p class="check-item__desc">Gas Safe, F-Gas, CSCS and all relevant qualifications are checked before any candidate progresses to interview.</p>
               </div>
             </li>
             <li class="check-item">
               <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
               <div class="check-item__body">
-                <p class="check-item__title">Effortless Navigation</p>
-                <p class="check-item__desc">A user-friendly platform designed to make your job search straightforward and stress-free.</p>
+                <p class="check-item__title">Lancashire Network</p>
+                <p class="check-item__desc">A pre-built pool of local M&amp;E talent means faster shortlists and fewer delays filling critical roles across the business.</p>
               </div>
             </li>
             <li class="check-item">
               <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
               <div class="check-item__body">
-                <p class="check-item__title">Data-Driven Insights</p>
-                <p class="check-item__desc">View analytics that offer insights into your career prospects and potential employers.</p>
+                <p class="check-item__title">Full-Spectrum Coverage</p>
+                <p class="check-item__desc">From apprentices and trades to design, procurement and senior management, every discipline within M&amp;E is covered.</p>
               </div>
             </li>
             <li class="check-item">
               <div class="check-item__bullet"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
               <div class="check-item__body">
-                <p class="check-item__title">Time-Saving Efficiency</p>
-                <p class="check-item__desc">Streamlined processes help you focus on what matters most: securing a fulfilling career.</p>
+                <p class="check-item__title">Direct Placement</p>
+                <p class="check-item__desc">Candidates apply directly into Vital Synergy. No intermediaries, no agency fees, no unnecessary steps in the process.</p>
               </div>
             </li>
           </ul>
@@ -294,7 +296,7 @@
           </div>
           <div class="vmp-card__body">
             <span class="vmp-card__label">Our Vision</span>
-            <p class="vmp-card__text">To be the global leader in hiring and recruitment.</p>
+            <p class="vmp-card__text">To be the leading M&amp;E engineering employer in Lancashire and the wider North West.</p>
           </div>
         </div>
         <div class="vmp-card">
@@ -303,95 +305,30 @@
           </div>
           <div class="vmp-card__body">
             <span class="vmp-card__label">Our Purpose</span>
-            <p class="vmp-card__text">To help people drive their career success.</p>
+            <p class="vmp-card__text">To place skilled engineers in roles where they can thrive and build lasting careers.</p>
           </div>
         </div>
         <div class="vmp-card">
           <div class="vmp-card__icon">
-            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
           </div>
           <div class="vmp-card__body">
             <span class="vmp-card__label">Our Mission</span>
-            <p class="vmp-card__text">To use our pioneering skills-matching architecture to enhance hiring.</p>
+            <p class="vmp-card__text">To maintain a compliance-verified network of M&amp;E professionals ready to contribute from day one.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Case Studies -->
-    <section class="case-studies" id="case-studies">
-      <div class="case-studies__inner container">
-        <div class="case-studies__heading">
-          <p class="kicker">Case Studies</p>
-          <h2>Working with <span class="accent--blue">Vital Synergy</span></h2>
-        </div>
-        <div class="case-studies__grid">
-          <article class="case-card">
-            <div class="case-card__img">
-              <img src="https://images.unsplash.com/photo-1534438327731-5f84e1e53bae?w=900&h=500&fit=crop&auto=format&q=80" alt="Snap Fitness" loading="lazy">
-            </div>
-            <div class="case-card__body">
-              <p class="case-card__name">Snap Fitness</p>
-              <p class="case-card__desc">10 suitable candidates in only three days, dramatically cutting their time-to-hire.</p>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-card__img">
-              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900&h=500&fit=crop&auto=format&q=80" alt="Unipol" loading="lazy">
-            </div>
-            <div class="case-card__body">
-              <p class="case-card__name">Unipol</p>
-              <p class="case-card__desc">Secured a diverse pool of skilled Gen Z applicants for specialist roles.</p>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-card__img">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&h=500&fit=crop&auto=format&q=80" alt="Opta Search" loading="lazy">
-            </div>
-            <div class="case-card__body">
-              <p class="case-card__name">Opta Search</p>
-              <p class="case-card__desc">Boosting Opta Search with excellent job advertising and candidate quality.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Focus on Results -->
-    <section class="results" id="results">
-      <div class="results__inner container">
-        <div class="results__content">
-          <p class="kicker">Focus on Results</p>
-          <h2>Relax while Vital Synergy fills <span class="accent--blue">your vacancies.</span></h2>
-          <p>Our data-driven approach ensures we find candidates that exceed your expectations. Trust our proven track record for a seamless hiring experience.</p>
-          <div class="results__stats">
-            <div class="results-stat">
-              <p class="results-stat__num">97.5%</p>
-              <div class="results-stat__stars" aria-label="5 stars">
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-              </div>
-              <p class="results-stat__label">Customer Satisfaction</p>
-            </div>
-            <div class="results-stat">
-              <p class="results-stat__num">8x</p>
-              <div class="results-stat__stars" aria-label="5 stars">
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-                <i class="fa-solid fa-star" aria-hidden="true"></i>
-              </div>
-              <p class="results-stat__label">More Top Talent</p>
-            </div>
-          </div>
-        </div>
-        <div class="results__visual">
-          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop&auto=format&q=80" alt="Recruitment analytics dashboard" loading="lazy">
-        </div>
+    <!-- CTA -->
+    <section class="cta-banner" id="get-started">
+      <div class="cta-banner__inner container">
+        <h2>Ready to Join the Vital Synergy Team?</h2>
+        <p>Browse open roles across all divisions and apply directly through the portal today.</p>
+        <a href="/jobs" class="btn btn--inverted">
+          Browse Open Roles
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
     </section>
 
@@ -403,27 +340,15 @@
         <a href="/" class="footer__logo">
           <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="logo-img logo-img--footer">
         </a>
-        <p class="footer__tagline">Lancashire's leading recruitment platform connecting top employers with exceptional local candidates.</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Follow us on LinkedIn">
-            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="#" aria-label="Follow us on Facebook">
-            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="#" aria-label="Follow us on X">
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-          </a>
-        </div>
+        <p class="footer__tagline">Vital Synergy's recruitment portal, connecting M&amp;E engineering talent with opportunities across the business.</p>
       </div>
       <div class="footer__cols">
         <div class="footer__col">
-          <p class="footer__col-heading">Platform</p>
+          <p class="footer__col-heading">Services</p>
           <ul>
             <li><a href="/employers">For Employers</a></li>
             <li><a href="/candidates">For Candidates</a></li>
-            <li><a href="/jobs">Browse Jobs</a></li>
-            <li><a href="/employer-login">Employer Login</a></li>
+            <li><a href="/jobs">Browse Roles</a></li>
             <li><a href="/candidate-login">Candidate Login</a></li>
           </ul>
         </div>
@@ -435,23 +360,38 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <p class="footer__col-heading">Legal</p>
-          <ul>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms &amp; Conditions</a></li>
-          </ul>
-        </div>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Connect with us on LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Contact us on WhatsApp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Follow us on Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Follow us on Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="footer__bottom">
         <div class="footer__legal">
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="/terms">Terms &amp; Conditions</a>
         </div>
-        <p class="footer__copyright">&copy; 2025 Vital Synergy. All rights reserved.</p>
+        <p class="footer__copyright">&copy; 2026 Vital Synergy. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg class="back-to-top__ring" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="back-to-top__track" cx="27" cy="27" r="24"/>
+      <circle class="back-to-top__fill" id="scroll-progress" cx="27" cy="27" r="24"/>
+    </svg>
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
   <script src="js/main.js" defer></script>
 </body>

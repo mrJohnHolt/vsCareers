@@ -1041,8 +1041,16 @@ footer {
   display: flex;
   gap: var(--space-lg);
   flex-wrap: wrap;
+  justify-content: center;
   padding-top: var(--space-sm);
   border-top: 1px solid rgba(18, 75, 138, 0.10);
+}
+
+.story-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .story-stat__num {
@@ -1148,15 +1156,23 @@ footer {
 
 .vmp {
   background: var(--cl-white);
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0;
   border-top: 1px solid rgba(18, 75, 138, 0.08);
   border-bottom: 1px solid rgba(18, 75, 138, 0.08);
+}
+
+@media (min-width: 768px) {
+  .vmp { padding: var(--space-xl) 0; }
 }
 
 .vmp__inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-md);
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .vmp__inner { gap: var(--space-md); }
 }
 
 .vmp-card {
@@ -1164,7 +1180,11 @@ footer {
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .vmp-card { padding: var(--space-md) var(--space-sm); }
 }
 
 .vmp-card__icon {
