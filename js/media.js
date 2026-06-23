@@ -4,7 +4,7 @@ const jobs = {
     location: 'Ribble Valley, Lancashire',
     type: 'Permanent',
     closes: '30 June 2026',
-    caption: "🔨 We're hiring a Site Manager! Join the Vital Synergy team in Ribble Valley. Permanent role, competitive package. Apply now 👇\n\n#MandE #Hiring #Lancashire #Engineering #SiteManager",
+    caption: "🔨 We're hiring a Site Manager! Join the Calderforge team in Ribble Valley. Permanent role, competitive package. Apply now 👇\n\n#MandE #Hiring #Lancashire #Engineering #SiteManager",
     img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&h=500&fit=crop&auto=format&q=80',
     status: 'live',
     socials: { linkedin: true, facebook: true, instagram: false, whatsapp: false },
@@ -16,7 +16,7 @@ const jobs = {
     location: 'Ribble Valley, Lancashire',
     type: 'Part-Time',
     closes: '30 June 2026',
-    caption: "📊 Flexible Part-Time Bookkeeper role now available at Vital Synergy HQ, Ribble Valley. Great opportunity for an experienced bookkeeper. Apply today 👇\n\n#Finance #PartTime #Lancashire #Hiring #Bookkeeper",
+    caption: "📊 Flexible Part-Time Bookkeeper role now available at Calderforge HQ, Ribble Valley. Great opportunity for an experienced bookkeeper. Apply today 👇\n\n#Finance #PartTime #Lancashire #Hiring #Bookkeeper",
     img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=500&fit=crop&auto=format&q=80',
     status: 'draft',
     socials: { linkedin: true, facebook: false, instagram: true, whatsapp: false },
@@ -28,7 +28,7 @@ const jobs = {
     location: 'Read, Lancashire',
     type: 'Permanent',
     closes: '30 June 2026',
-    caption: "⚡ Electrical Estimator wanted at Vital Synergy, Read HQ. Permanent role with a leading M&E company. If you've got the skills, we want to hear from you 👇\n\n#Electrical #MandE #Estimator #Lancashire #Hiring",
+    caption: "⚡ Electrical Estimator wanted at Calderforge, Read HQ. Permanent role with a leading M&E company. If you've got the skills, we want to hear from you 👇\n\n#Electrical #MandE #Estimator #Lancashire #Hiring",
     img: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=900&h=500&fit=crop&auto=format&q=80',
     status: 'live',
     socials: { linkedin: true, facebook: true, instagram: false, whatsapp: true },
@@ -40,7 +40,7 @@ const jobs = {
     location: 'Burnley, Lancashire',
     type: 'Permanent',
     closes: '30 June 2026',
-    caption: "🔥 Reactive Gas Engineer vacancy in Burnley. Join the Vital Synergy team — permanent role, competitive pay, great team. Gas Safe registered? Apply now 👇\n\n#GasSafe #PlumbingAndHeating #Lancashire #Hiring #GasEngineer",
+    caption: "🔥 Reactive Gas Engineer vacancy in Burnley. Join the Calderforge team — permanent role, competitive pay, great team. Gas Safe registered? Apply now 👇\n\n#GasSafe #PlumbingAndHeating #Lancashire #Hiring #GasEngineer",
     img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&h=500&fit=crop&auto=format&q=80',
     status: 'draft',
     socials: { linkedin: false, facebook: true, instagram: true, whatsapp: true },
@@ -123,11 +123,14 @@ function renderCampaigns() {
               <div class="social-preview-card__overlay"></div>
             </div>
             <div class="social-preview-card__header">
-              <img src="img/Vital synergy logo EE - Transparent.png" alt="Vital Synergy" class="social-preview-card__logo">
+              <div class="social-preview-card__logo">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>Calderforge</span>
+              </div>
               <span class="social-preview-card__pill">Now Hiring</span>
             </div>
             <div class="social-preview-card__content">
-              <p class="social-preview-card__kicker">Vital Synergy</p>
+              <p class="social-preview-card__kicker">Calderforge</p>
               <h2 class="social-preview-card__title">${job.title}</h2>
               <ul class="social-preview-card__meta" aria-label="Job details">
                 <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${job.location}</li>
@@ -136,7 +139,7 @@ function renderCampaigns() {
               </ul>
             </div>
             <div class="social-preview-card__footer">
-              <span class="social-preview-card__url">vitalsynergy.co.uk/jobs</span>
+              <span class="social-preview-card__url">calderforge.co.uk/jobs</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </div>
           </div>

@@ -213,11 +213,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: none;
 }
 
-.nav__logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav__logo { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
 .nav__logo:focus-visible { outline: 2px solid var(--cl-primary); outline-offset: 3px; border-radius: 2px; }
 
-.logo-img { height: 44px; width: auto; display: block; }
-.logo-img--footer { height: 40px; filter: brightness(0) invert(1); }
+.nav__logo-icon { font-size: 1.5rem; color: var(--cl-primary); }
+.nav__logo-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.footer__logo .nav__logo-icon,
+.footer__logo .nav__logo-text { color: #ffffff; }
 
 .nav__links {
   display: none;
@@ -2765,9 +2773,14 @@ footer {
 }
 
 .social-preview-card__logo {
-  height: clamp(18px, 3vw, 28px);
-  width: auto;
-  filter: brightness(0) invert(1);
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .social-preview-card__pill {

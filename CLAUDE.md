@@ -1,4 +1,4 @@
-# CLAUDE.md — Vital Synergy
+# CLAUDE.md — Calderforge
 
 ## Screenshotting / verification
 
@@ -17,19 +17,19 @@ node screenshot-mobile.mjs http://localhost:5501/about.html mobile-about
 
 
 ## Client
-- Name: Vital Synergy
+- Name: Calderforge (fictional brand, built for portfolio purposes)
 - Sector: Recruitment / talent acquisition
 
 ## Brand
 - Deep Blue: #124B8A — buttons, UI, primary brand surface (--cl-primary)
 - Sky Blue: #2196D4 — secondary UI, accent--hero (--cl-secondary)
 - Indigo: #2F3382 — dark sections, footer, platform preview (--cl-deep)
-- Vital Orange: #EB5324 — accent only, dividers, small highlights (--cl-accent)
+- Accent Orange: #EB5324 — accent only, dividers, small highlights (--cl-accent)
 - Text: #000000 — all body/heading text
 - Muted text: #444444
 - Display font: Bebas Neue (Google Fonts) — h1 hero titles, uppercase
 - Body font: Nunito (Google Fonts) — h2, h3, body, captions
-- Logo: img/Vital synergy logo EE - Transparent.png
+- Logo: CSS wordmark (Font Awesome bolt icon + "Calderforge" in Bebas Neue) — no image asset
 
 ## Site
 - Pages: index.html, about.html
